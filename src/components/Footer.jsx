@@ -4,7 +4,7 @@ import { FaLinkedinIn,FaTwitter,FaFacebookF,FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className=" w-full bg-box text-white md:px-32 md:py-10 ">
+    <footer className=" w-full bg-box text-white  md:px-32 md:py-10 ">
       <div className="grid grid-cols-1 text-center md:text-start lg:grid-cols-2 place-content-start lg:place-items-center border-t-2 border-b-2 pt-10 pb-10 border-slate-400">
         <div className="flex flex-col lg:flex-row   items-center ">
           {/* brand image */}
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
         </div>
         {/* social icon div */}
-        <div className="flex gap-x-4 ml-28">
+        <div className="flex  mt-10 sm:mt-0  gap-x-4 ml-28">
             <div className="size-8 grid place-items-center border-[1px] rounded-full">
                 <FaLinkedinIn/>
             </div>

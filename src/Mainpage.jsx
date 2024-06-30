@@ -4,32 +4,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { HiArrowLongRight } from "react-icons/hi2";
 import requirement from "./assets/images/hero-2.jpg";
 import check from "./assets/images/check.png";
-const buttons = [
-  {
-    id: 1,
-    city: "Abu Dhabi",
-  },
-  {
-    id: 2,
-    city: "Dubai",
-  },
-  {
-    id: 3,
-    city: "Sharjah & Ajman",
-  },
-  {
-    id: 4,
-    city: "Fujairah",
-  },
-  {
-    id: 5,
-    city: "Ras Al Khaimah",
-  },
-  {
-    id: 6,
-    city: "Umm Al Quwain",
-  },
-];
+import {boxes,buttons} from "./components/data.js"
+
 export default function Mainpage() {
   const [tab, Settab] = useState(false);
   return (
@@ -211,14 +187,24 @@ export default function Mainpage() {
         </div>
       </section>
       {/* how it works section */}
-      <section className="h-svh container mx-auto grid place-items-center">
-        <div className="w-7/12 text-center">
-          <h2 className="font-bold text-4xl">How it works?</h2>
-          <p className="text-xl">
+      <section className="h-fit md:mt-10 mb-28 container mx-auto grid place-items-center">
+        <div className="md:w-7/12 text-center space-y-7">
+          <h2 className="font-bold md:text-4xl">How it works?</h2>
+          <p className="text-xs md:text-xl">
             Buyers post their needs and review top suppliers, while suppliers
             complete profiles, connect with potential buyers, and build
             successful business relationships, sharing valuable feedback.
           </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-2 place-content-center gap-y-4 sm:gap-y-0 mt-5 mb-5 ">
+            {boxes.map(({id,text,img})=>{
+                return(
+                    <div key={id} className={`${id%2===0?"bg-white":"bg-cyan-50"} w-fit md:w-96 md:h-64 flex flex-col justify-center items-center text-center gap-y-5 `}>
+<img src={img} alt="box" className="w-16 sm:w-auto" />
+<p className="text-xs md:text-lg font-semibold w-40 md:w-64">{text}</p>
+                    </div>
+                )
+            })}
         </div>
       </section>
     </div>
