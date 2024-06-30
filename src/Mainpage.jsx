@@ -196,12 +196,12 @@ export default function Mainpage() {
             successful business relationships, sharing valuable feedback.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-2 place-content-center gap-y-4 sm:gap-y-0 mt-5 mb-5 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-2 place-content-center md:gap-x-6 lg:gap-x-0 gap-y-4 lg:gap-y-0 mt-5 mb-5 ">
             {boxes.map(({id,text,img})=>{
                 return(
-                    <div key={id} className={`${id%2===0?"bg-white":"bg-cyan-50"} w-fit md:w-96 md:h-64 flex flex-col justify-center items-center text-center gap-y-5 `}>
+                    <div key={id} className={`${id%2===0?"bg-white":"bg-cyan-50"} w-fit lg:w-96 md:h-64 flex flex-col justify-center items-center text-center gap-y-5 `}>
 <img src={img} alt="box" className="w-16 sm:w-auto" />
-<p className="text-xs md:text-lg font-semibold w-40 md:w-64">{text}</p>
+<p className="text-xs md:text-sm lg:text-lg font-semibold w-40 md:w-64">{text}</p>
                     </div>
                 )
             })}
