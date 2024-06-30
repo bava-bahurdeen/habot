@@ -13,7 +13,8 @@ export default {
         primary:" #00732F",
         secondary:" #EB7150",
         success:" #E7770D",
-        habot:"#271555"
+        habot:"#271555",
+        box:"#072F57"
 
       }
     },

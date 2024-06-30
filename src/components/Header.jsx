@@ -20,7 +20,7 @@ export default function Header() {
     <ul className='flex  relative flex-col justify-center items-center pt-36 gap-y-10 '>
     <li>Find Suppliers</li>
     <li className='flex items-center gap-x-1'>Finde Service Tags <MdKeyboardArrowDown/></li>
-    <li><button className='w-44 p-2 border-2 border-primary text-primary font-semibold'>Login/Signup</button></li>
+    <li><button className='w-44 p-2 border-2 rounded-md border-primary text-primary font-semibold'>Login/Signup</button></li>
    </ul>
    <IoCloseOutline className='absolute text-2xl font-semibold top-4 right-7' onClick={()=>setisOpen(!isOpen)}/>
     </motion.div>}
@@ -30,7 +30,7 @@ export default function Header() {
    <ul className='flex justify-center gap-x-8 items-center pr-10  '>
     <li>Find Suppliers</li>
     <li className='flex items-center gap-x-1'>Finde Service Tags <MdKeyboardArrowDown/></li>
-    <li><button className='w-44 p-2 border-2 border-primary text-primary font-bold'>Login/Signup</button></li>
+    <li><button className='w-44 p-2 border-2 rounded-md  border-primary text-primary font-bold'>Login/Signup</button></li>
    </ul>
     </div>
    </nav>

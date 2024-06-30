@@ -5,7 +5,7 @@ import Mainpage from './Mainpage'
 import "./App.css"
 export default function App() {
   return (
-    <div className='font-sans'>
+    <div className='font-sans overflow-hidden'>
       <Header/>
       <Mainpage/>
       <Footer/>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdWork } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiArrowLongRight } from "react-icons/hi2";
+import requirement from "./assets/images/hero-2.jpg";
+import check from "./assets/images/check.png";
 const buttons = [
   {
     id: 1,
@@ -29,6 +31,7 @@ const buttons = [
   },
 ];
 export default function Mainpage() {
+  const [tab, Settab] = useState(false);
   return (
     <div className="container mx-auto">
       {/* hero-section */}
@@ -70,12 +73,12 @@ export default function Mainpage() {
         </h2>
       </section>
       {/* habot Signup section */}
-      <section className="container mx-auto flex flex-col md:flex-row md:justify-around justify-center p-10 md:p-20">
+      <section className="container mx-auto flex flex-col  lg:flex-row lg:justify-around justify-center p-10 md:p-20">
         <div className="flex flex-col gap-y-6  items-center sm:items-start ">
-          <h2 className="md:text-4xl font-bold">
+          <h2 className="text-center text-2xl md:text-4xl font-bold">
             Ready to dive into <span className="text-habot">HABOT?</span>
           </h2>
-          <p className="md:w-6/12 font-medium">
+          <p className=" text-center text-lg md:text-start md:w-6/12 lg:w-9/12 font-medium">
             Signing up with HABOT opens the door to a world of new opportunities
             and potential for business growth. Gain access to a vibrant
             community of like-minded individuals, unlock valuable resources, and
@@ -85,7 +88,7 @@ export default function Mainpage() {
             Signup Today! <HiArrowLongRight className="text-2xl" />{" "}
           </buttn>
         </div>
-        <div className="w-full mt-5 md:mt-0 grid sm:grid-cols-2 place-items-center gap-y-10">
+        <div className="w-full mt-5 lg:mt-0 grid sm:grid-cols-2 place-items-center gap-y-10">
           {buttons.map(({ id, city }) => {
             return (
               <button
@@ -97,6 +100,125 @@ export default function Mainpage() {
               </button>
             );
           })}
+        </div>
+      </section>
+      {/* requirements section */}
+      <section className=" grid place-items-center">
+        <div className="bg-box  rounded-md  flex flex-col lg:flex-row gap-x-14 p-10 md:p-28">
+          <img src={requirement} alt="requirement" className="rounded-md" />
+
+          <div>
+            <div className="flex justify-around text-white mt-5 lg:mt-0  md:text-3xl font-semibold">
+              <div className="text-center space-y-2">
+                <h2
+                  className={`${
+                    tab ? "" : "!text-secondary "
+                  } transition-all duration-300  cursor-pointer`}
+                  onClick={() => Settab(!tab)}
+                >
+                  Buyer
+                </h2>
+                <div
+                  className={`${
+                    tab ? " opacity-0" : "opacity-100 "
+                  } w-32 md:w-52 h-1 transition-all duration-300  bg-secondary`}
+                ></div>
+              </div>
+              <div className="text-center space-y-2">
+                <h2
+                  className={`${
+                    tab ? "!text-secondary " : ""
+                  } transition-all duration-300 cursor-pointer`}
+                  onClick={() => Settab(!tab)}
+                >
+                  Supplier
+                </h2>
+                <div
+                  className={`${
+                    tab ? "opacity-100 " : "opacity-0"
+                  }  w-32 md:w-52 h-1 transition-all duration-300  bg-secondary`}
+                ></div>
+              </div>
+            </div>
+            {tab ? (
+              <div
+                className={`${
+                  tab ? "opacity-100" : "opacity-0"
+                } md:w-[500px] space-y-2 mt-10 font-medium text-white  `}
+              >
+                <div className="flex items-center gap-x-2  text-xs md:text-2xl">
+                  <img src={check} alt="check" />
+                  <p className="flex items-center ">
+                    {" "}
+                    Complete your profile and get verified..
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-x-2  text-xs md:text-2xl">
+                  <img src={check} alt="check" />
+                  <p className="flex items-center ">
+                    Select service tags for relevant opportunities.
+                  </p>
+                </div>
+                <div className="flex items-center gap-x-2  text-xs md:text-2xl">
+                  <img src={check} alt="check" />
+                  <p className="flex items-center  ">
+                    {" "}
+                    Reach out to buyers and expand your business.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div
+                className={`${
+                  tab ? "opacity-0" : "opacity-100"
+                } md:w-[500px] space-y-2 mt-10 font-medium text-white  `}
+              >
+                <div className="flex items-center gap-x-2  text-xs md:text-2xl">
+                  <img src={check} alt="check" />
+                  <p className="flex items-center "> Post your requirements.</p>
+                </div>
+
+                <div className="flex items-center gap-x-2  text-xs md:text-2xl">
+                  <img src={check} alt="check" />
+                  <p className="flex items-center ">
+                    {" "}
+                    Sit back for multiple suppliers to contact you.
+                  </p>
+                </div>
+                <div className="flex items-center gap-x-2  text-xs md:text-2xl">
+                  <img src={check} alt="check" />
+                  <p className="flex items-center  ">
+                    {" "}
+                    Choose among the suppliers based on the ratings and reviews.
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+      {/* verfied section */}
+      <section className="w-full  sm:ml-0 h-48 py-10 md:py-16  bg-cyan-50 mt-10 md:mt-28">
+        <div className="flex flex-col gap-y-4 md:flex-row justify-around items-center">
+          <h2 className="md:text-2xl lg:text-4xl">
+            Lets Suppliers{" "}
+            <span className="border-b-4 border-secondary">Find You</span>
+          </h2>
+          <button className="bg-secondary rounded-lg text-white font-semibold w-52 p-4">
+            Get Verified
+          </button>
+        </div>
+      </section>
+      {/* how it works section */}
+      <section className="h-svh container mx-auto grid place-items-center">
+        <div className="w-7/12 text-center">
+          <h2 className="font-bold text-4xl">How it works?</h2>
+          <p className="text-xl">
+            Buyers post their needs and review top suppliers, while suppliers
+            complete profiles, connect with potential buyers, and build
+            successful business relationships, sharing valuable feedback.
+          </p>
         </div>
       </section>
     </div>
