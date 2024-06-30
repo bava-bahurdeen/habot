@@ -1,0 +1,6 @@
+.hero{
+  background:linear-gradient(to right, rgba(7, 47, 87, 0.85), rgba(7, 47, 87, 0.45)), url(./assets/images/hero-image.png);
+  height: 500px;
+ background-position:top;
+ background-size: cover;
+}
