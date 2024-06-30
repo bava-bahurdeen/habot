@@ -50,11 +50,11 @@ export default function Mainpage() {
       </section>
       {/* habot Signup section */}
       <section className="container mx-auto flex flex-col  lg:flex-row lg:justify-around justify-center p-10 md:p-20">
-        <div className="flex flex-col gap-y-6  items-center sm:items-start ">
+        <div className="flex flex-col gap-y-6  items-center lg:items-start ">
           <h2 className="text-center text-2xl md:text-4xl font-bold">
             Ready to dive into <span className="text-habot">HABOT?</span>
           </h2>
-          <p className=" text-center text-lg md:text-start md:w-6/12 lg:w-9/12 font-medium">
+          <p className=" text-center lg:text-lg lg:text-start  lg:w-9/12 font-medium">
             Signing up with HABOT opens the door to a world of new opportunities
             and potential for business growth. Gain access to a vibrant
             community of like-minded individuals, unlock valuable resources, and
