@@ -25,7 +25,7 @@ export default function Mainpage() {
             <MdWork className="text-xl text-success" />
             <input
               type="text"
-              className=" md:w-full p-2 h-fit  border-none focus:border-none bg-none"
+              className=" md:w-full p-2 h-fit  border-none focus:border-none focus:outline-none bg-none"
               placeholder="Search your required service here"
             />
           </div>
@@ -33,7 +33,7 @@ export default function Mainpage() {
             <FaLocationDot className="text-xl text-success" />
             <input
               type="text"
-              className=" md:w-full p-2 h-fit  border-none focus:border-none bg-none"
+              className=" md:w-full p-2 h-fit  border-none focus:border-none focus:outline-none bg-none"
               placeholder="Search your desired location here"
             />
           </div>
